@@ -17,6 +17,17 @@
           <Property Name="contactos" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="recomendaciones" Type="varchar" MaxLength="300" />
         </EntityType>
+        <EntityType Name="Arquitecto">
+          <Key>
+            <PropertyRef Name="codigoAr" />
+          </Key>
+          <Property Name="codigoAr" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombreCompleto" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="domicilio" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="aniosExpe" Type="tinyint" Nullable="false" />
+          <Property Name="contactos" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="recomendaciones" Type="varchar" MaxLength="300" />
+        </EntityType>
         <EntityType Name="Contratista">
           <Key>
             <PropertyRef Name="codigoC" />
@@ -29,6 +40,7 @@
         </EntityType>
         <EntityContainer Name="BD_CONSTRUCTIONModelStoreContainer">
           <EntitySet Name="Albanil" EntityType="Self.Albanil" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Arquitecto" EntityType="Self.Arquitecto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Contratista" EntityType="Self.Contratista" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -48,6 +60,7 @@
         <EntityContainer Name="BD_CONSTRUCTIONEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Contratistas" EntityType="Self.Contratista" />
           <EntitySet Name="Albanils" EntityType="BD_CONSTRUCTIONModel.Albanil" />
+          <EntitySet Name="Arquitectoes" EntityType="BD_CONSTRUCTIONModel.Arquitecto" />
         </EntityContainer>
         <EntityType Name="Albanil">
           <Key>
@@ -58,6 +71,17 @@
           <Property Name="domicilio" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="aniosExpe" Type="Byte" Nullable="false" />
           <Property Name="trabajosAnteriores" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="contactos" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="recomendaciones" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Arquitecto">
+          <Key>
+            <PropertyRef Name="codigoAr" />
+          </Key>
+          <Property Name="codigoAr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombreCompleto" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="domicilio" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="aniosExpe" Type="Byte" Nullable="false" />
           <Property Name="contactos" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="recomendaciones" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
         </EntityType>
@@ -88,6 +112,18 @@
                 <ScalarProperty Name="domicilio" ColumnName="domicilio" />
                 <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
                 <ScalarProperty Name="codigoAl" ColumnName="codigoAl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Arquitectoes">
+            <EntityTypeMapping TypeName="BD_CONSTRUCTIONModel.Arquitecto">
+              <MappingFragment StoreEntitySet="Arquitecto">
+                <ScalarProperty Name="recomendaciones" ColumnName="recomendaciones" />
+                <ScalarProperty Name="contactos" ColumnName="contactos" />
+                <ScalarProperty Name="aniosExpe" ColumnName="aniosExpe" />
+                <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+                <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+                <ScalarProperty Name="codigoAr" ColumnName="codigoAr" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

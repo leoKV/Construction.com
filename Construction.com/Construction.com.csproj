@@ -132,10 +132,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Arquitecto.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Contratista.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\AlbanilsController.cs" />
+    <Compile Include="Controllers\AlbanilesController.cs" />
+    <Compile Include="Controllers\ArquitectosController.cs" />
     <Compile Include="Controllers\ContratistasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -163,6 +167,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\albanil.css" />
+    <Content Include="Content\css\arquitecto.css" />
     <Content Include="Content\css\contratista.css" />
     <Content Include="Content\css\main.css" />
     <Content Include="Content\img\img1.jpg" />
@@ -229,11 +235,16 @@
     <Content Include="Views\Contratistas\Details.cshtml" />
     <Content Include="Views\Contratistas\Edit.cshtml" />
     <Content Include="Views\Contratistas\Index.cshtml" />
-    <Content Include="Views\Albanils\Create.cshtml" />
-    <Content Include="Views\Albanils\Delete.cshtml" />
-    <Content Include="Views\Albanils\Details.cshtml" />
-    <Content Include="Views\Albanils\Edit.cshtml" />
-    <Content Include="Views\Albanils\Index.cshtml" />
+    <Content Include="Views\Albaniles\Create.cshtml" />
+    <Content Include="Views\Albaniles\Delete.cshtml" />
+    <Content Include="Views\Albaniles\Details.cshtml" />
+    <Content Include="Views\Albaniles\Edit.cshtml" />
+    <Content Include="Views\Albaniles\Index.cshtml" />
+    <Content Include="Views\Arquitectos\Create.cshtml" />
+    <Content Include="Views\Arquitectos\Delete.cshtml" />
+    <Content Include="Views\Arquitectos\Details.cshtml" />
+    <Content Include="Views\Arquitectos\Edit.cshtml" />
+    <Content Include="Views\Arquitectos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
-
+    <link rel="stylesheet" href="~/Content/css/albanil.css"/>
 }
 
 <h2>Index</h2>
@@ -56,7 +56,7 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.codigoAl }) |
-            @Html.ActionLink("Details", "Details", new { id=item.codigoAl }) |
+            @Html.ActionLink("Ver Perfil", "Details", new { id=item.codigoAl }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.codigoAl })
         </td>
     </tr>

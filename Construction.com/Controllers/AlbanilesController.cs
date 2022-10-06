@@ -10,17 +10,17 @@ using Construction.com;
 
 namespace Construction.com.Controllers
 {
-    public class AlbanilsController : Controller
+    public class AlbanilesController : Controller
     {
         private BD_CONSTRUCTIONEntities db = new BD_CONSTRUCTIONEntities();
 
-        // GET: Albanils
+        // GET: Albaniles
         public ActionResult Index()
         {
             return View(db.Albanils.ToList());
         }
 
-        // GET: Albanils/Details/5
+        // GET: Albaniles/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,13 +35,13 @@ namespace Construction.com.Controllers
             return View(albanil);
         }
 
-        // GET: Albanils/Create
+        // GET: Albaniles/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Albanils/Create
+        // POST: Albaniles/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -58,7 +58,7 @@ namespace Construction.com.Controllers
             return View(albanil);
         }
 
-        // GET: Albanils/Edit/5
+        // GET: Albaniles/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,7 +73,7 @@ namespace Construction.com.Controllers
             return View(albanil);
         }
 
-        // POST: Albanils/Edit/5
+        // POST: Albaniles/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,7 +89,7 @@ namespace Construction.com.Controllers
             return View(albanil);
         }
 
-        // GET: Albanils/Delete/5
+        // GET: Albaniles/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +104,7 @@ namespace Construction.com.Controllers
             return View(albanil);
         }
 
-        // POST: Albanils/Delete/5
+        // POST: Albaniles/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

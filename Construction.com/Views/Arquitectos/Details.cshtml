@@ -1,14 +1,15 @@
-﻿@model Construction.com.Albanil
+﻿@model Construction.com.Arquitecto
 
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    <link rel="stylesheet" href="~/Content/css/arquitecto.css" />
 }
 
 <h2>Details</h2>
 
 <div>
-    <h4>Albanil</h4>
+    <h4>Arquitecto</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -36,14 +37,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.trabajosAnteriores)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.trabajosAnteriores)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.contactos)
         </dt>
 
@@ -62,6 +55,10 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.codigoAl }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.codigoAr }) |
     @Html.ActionLink("Back to List", "Index")
+
 </p>
+
+<button type="button" class="btn btn-success dropdown-toggle" aria-haspopup="true" aria-expanded="false">Contratar Arquitecto</button>
+

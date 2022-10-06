@@ -1,0 +1,70 @@
+﻿@model Construction.com.Albanil
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link rel="stylesheet" href="~/Content/css/albanil.css" />
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Albanil</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreCompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreCompleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.domicilio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.domicilio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.aniosExpe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aniosExpe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trabajosAnteriores)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trabajosAnteriores)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contactos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contactos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.recomendaciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.recomendaciones)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.codigoAl }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+<button type="button" class="btn btn-success dropdown-toggle" aria-haspopup="true" aria-expanded="false">Contratar Albañil</button>

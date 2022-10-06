@@ -12,6 +12,17 @@
     <Property Name="contactos" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="recomendaciones" Type="varchar" MaxLength="300" />
   </EntityType>
+  <EntityType Name="Arquitecto">
+    <Key>
+      <PropertyRef Name="codigoAr" />
+    </Key>
+    <Property Name="codigoAr" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreCompleto" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="domicilio" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="aniosExpe" Type="tinyint" Nullable="false" />
+    <Property Name="contactos" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="recomendaciones" Type="varchar" MaxLength="300" />
+  </EntityType>
   <EntityType Name="Contratista">
     <Key>
       <PropertyRef Name="codigoC" />
@@ -24,6 +35,7 @@
   </EntityType>
   <EntityContainer Name="BD_CONSTRUCTIONModelStoreContainer">
     <EntitySet Name="Albanil" EntityType="Self.Albanil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Arquitecto" EntityType="Self.Arquitecto" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Contratista" EntityType="Self.Contratista" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>
