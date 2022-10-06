@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BD_CONSTRUCTIONModelStoreContainer" CdmEntityContainer="BD_CONSTRUCTIONEntities">
+    <EntitySetMapping Name="Contratistas">
+      <EntityTypeMapping TypeName="BD_CONSTRUCTIONModel.Contratista">
+        <MappingFragment StoreEntitySet="Contratista">
+          <ScalarProperty Name="codigoC" ColumnName="codigoC" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+          <ScalarProperty Name="contactos" ColumnName="contactos" />
+          <ScalarProperty Name="recomendaciones" ColumnName="recomendaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
