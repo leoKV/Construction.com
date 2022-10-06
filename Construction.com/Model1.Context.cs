@@ -26,5 +26,6 @@ namespace Construction.com
         }
     
         public virtual DbSet<Contratista> Contratistas { get; set; }
+        public virtual DbSet<Albanil> Albanils { get; set; }
     }
 }

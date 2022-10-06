@@ -12,5 +12,18 @@
   </EntityType>
   <EntityContainer Name="BD_CONSTRUCTIONEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Contratistas" EntityType="Self.Contratista" />
+    <EntitySet Name="Albanils" EntityType="BD_CONSTRUCTIONModel.Albanil" />
   </EntityContainer>
+  <EntityType Name="Albanil">
+    <Key>
+      <PropertyRef Name="codigoAl" />
+    </Key>
+    <Property Name="codigoAl" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombreCompleto" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="domicilio" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="aniosExpe" Type="Byte" Nullable="false" />
+    <Property Name="trabajosAnteriores" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="contactos" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="recomendaciones" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

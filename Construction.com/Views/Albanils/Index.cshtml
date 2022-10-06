@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Construction.com.Albanil>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreCompleto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domicilio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.aniosExpe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trabajosAnteriores)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contactos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.recomendaciones)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreCompleto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domicilio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.aniosExpe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trabajosAnteriores)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contactos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.recomendaciones)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.codigoAl }) |
+            @Html.ActionLink("Details", "Details", new { id=item.codigoAl }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.codigoAl })
+        </td>
+    </tr>
+}
+
+</table>

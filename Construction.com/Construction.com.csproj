@@ -126,12 +126,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Albanil.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Contratista.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AlbanilsController.cs" />
     <Compile Include="Controllers\ContratistasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -225,6 +229,11 @@
     <Content Include="Views\Contratistas\Details.cshtml" />
     <Content Include="Views\Contratistas\Edit.cshtml" />
     <Content Include="Views\Contratistas\Index.cshtml" />
+    <Content Include="Views\Albanils\Create.cshtml" />
+    <Content Include="Views\Albanils\Delete.cshtml" />
+    <Content Include="Views\Albanils\Details.cshtml" />
+    <Content Include="Views\Albanils\Edit.cshtml" />
+    <Content Include="Views\Albanils\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

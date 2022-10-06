@@ -12,5 +12,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Albanils">
+      <EntityTypeMapping TypeName="BD_CONSTRUCTIONModel.Albanil">
+        <MappingFragment StoreEntitySet="Albanil">
+          <ScalarProperty Name="recomendaciones" ColumnName="recomendaciones" />
+          <ScalarProperty Name="contactos" ColumnName="contactos" />
+          <ScalarProperty Name="trabajosAnteriores" ColumnName="trabajosAnteriores" />
+          <ScalarProperty Name="aniosExpe" ColumnName="aniosExpe" />
+          <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="codigoAl" ColumnName="codigoAl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
