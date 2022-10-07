@@ -11,7 +11,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.nombreCompleto)
@@ -62,4 +62,32 @@
     </tr>
 }
 
-</table>
+</table>*@
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img src="..." alt="...">
+                <div class="caption">
+                    <h3>Albañil</h3>
+                    <p><b>Nombre Completo:</b></p>
+                    <p>@Html.DisplayFor(modelItem => item.nombreCompleto)</p>
+                    <p><b>Domicilio:</b></p>
+                    <p>@Html.DisplayFor(modelItem => item.domicilio)</p>
+                    <p><b>Años de Experiencia:</b></p>
+                    <p>@Html.DisplayFor(modelItem => item.aniosExpe) años</p>
+                    <p><b>Trabajos Anteriores:</b></p>
+                    <p>@Html.DisplayFor(modelItem => item.trabajosAnteriores) años</p>
+                    <p><b>Contactos:</b></p>
+                    <p>@Html.DisplayFor(modelItem => item.contactos)</p>
+                    <p><b>Recomendaciones:</b></p>
+                    <p>@Html.DisplayFor(modelItem => item.recomendaciones)</p>
+                    <button type="button" class="btn btn-success dropdown-toggle" aria-haspopup="true" aria-expanded="false">@Html.ActionLink("Ver Perfil", "Details", new { id = item.codigoAl })</button>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>
