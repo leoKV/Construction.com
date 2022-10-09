@@ -245,6 +245,8 @@
     <Content Include="Views\Arquitectos\Details.cshtml" />
     <Content Include="Views\Arquitectos\Edit.cshtml" />
     <Content Include="Views\Arquitectos\Index.cshtml" />
+    <Content Include="Views\Arquitectos\Modal_Contratar_Arquitecto.cshtml" />
+    <Content Include="Views\Albaniles\Modal_Contratar_Albanil.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

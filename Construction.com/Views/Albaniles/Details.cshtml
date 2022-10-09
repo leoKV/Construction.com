@@ -67,4 +67,12 @@
     @Html.ActionLink("Back to List", "Index")
 </p>
 
-<button type="button" class="btn btn-success dropdown-toggle" aria-haspopup="true" aria-expanded="false">Contratar Albañil</button>
+<button type="button" class="btn btn-success dropdown-toggle"
+        aria-haspopup="true" aria-expanded="false"
+        data-target="#modal_contratar_albanil" data-toggle="modal"
+        data-backdrop="static" data-keyboard="false"
+        onclick="contratar_arq('@Model.codigoAl')">
+    Contratar Albañil
+</button>
+
+@Html.Partial("Modal_Contratar_Albanil");

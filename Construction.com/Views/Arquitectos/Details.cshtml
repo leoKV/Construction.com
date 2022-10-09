@@ -60,5 +60,12 @@
 
 </p>
 
-<button type="button" class="btn btn-success dropdown-toggle" aria-haspopup="true" aria-expanded="false">Contratar Arquitecto</button>
+<button type="button" class="btn btn-success dropdown-toggle"
+        aria-haspopup="true" aria-expanded="false"
+        data-target="#modal_contratar_arquitecto" data-toggle="modal"
+        data-backdrop="static" data-keyboard="false"
+        onclick="contratar_arq('@Model.codigoAr')">
+     Contratar Arquitecto
+</button>
 
+@Html.Partial("Modal_Contratar_Arquitecto");
