@@ -78,12 +78,8 @@
                     <p>@Html.DisplayFor(modelItem => item.domicilio)</p>
                     <p><b>Años de Experiencia:</b></p>
                     <p>@Html.DisplayFor(modelItem => item.aniosExpe) años</p>
-                    <p><b>Trabajos Anteriores:</b></p>
-                    <p>@Html.DisplayFor(modelItem => item.trabajosAnteriores) años</p>
                     <p><b>Contactos:</b></p>
                     <p>@Html.DisplayFor(modelItem => item.contactos)</p>
-                    <p><b>Recomendaciones:</b></p>
-                    <p>@Html.DisplayFor(modelItem => item.recomendaciones)</p>
                     <button type="button" class="btn btn-success dropdown-toggle" aria-haspopup="true" aria-expanded="false">@Html.ActionLink("Ver Perfil", "Details", new { id = item.codigoAl })</button>
                 </div>
             </div>

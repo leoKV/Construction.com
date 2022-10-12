@@ -11,7 +11,8 @@ namespace Construction.com
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Data.SqlClient;
+
     public partial class Arquitecto
     {
         public int codigoAr { get; set; }
@@ -20,5 +21,6 @@ namespace Construction.com
         public byte aniosExpe { get; set; }
         public string contactos { get; set; }
         public string recomendaciones { get; set; }
+
     }
 }
