@@ -3,50 +3,8 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    <link rel="stylesheet" href="~/Content/css/arquitecto.css"/>
 }
 
-<h2>Index</h2>
+<h2>Contratos</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.nombreCompleto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.domicilio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.contactos)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.recomendaciones)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.nombreCompleto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.domicilio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.contactos)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.recomendaciones)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.codigoC }) |
-            @Html.ActionLink("Details", "Details", new { id=item.codigoC }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.codigoC })
-        </td>
-    </tr>
-}
-
-</table>

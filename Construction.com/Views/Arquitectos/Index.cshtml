@@ -3,67 +3,24 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    <link rel="stylesheet" href="~/Content/css/arquitecto.css" />
+    <link rel="stylesheet" href="~/Content/css/arquitecto.css"/>
 }
 <h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-@*<table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.nombreCompleto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.domicilio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.aniosExpe)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.contactos)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.recomendaciones)
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.nombreCompleto)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.domicilio)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.aniosExpe)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.contactos)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.recomendaciones)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.codigoAr }) |
-                    @Html.ActionLink("Ver Perfil", "Details", new { id = item.codigoAr }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.codigoAr })
-                </td>
-            </tr>
-        }
-
-    </table>*@
+<div class="alert alert-success alert-dismissible" role="alert" id="felicidad" style="display:none;">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>Felicidades!!</strong>Su proceso de contratación ha iniciado satisfactoriamente!.
+</div>
 
 <div class="row">
     @foreach (var item in Model)
     {
         <div class="col-md-4">
             <div class="thumbnail">
-                <img src="..." alt="...">
+                <img src="" alt="...">
                 <div class="caption">
                     <h3>Arquitecto</h3>
                     <p><b>Nombre Completo:</b></p>
@@ -81,6 +38,7 @@
 
     }
 </div>
+
 
 
 

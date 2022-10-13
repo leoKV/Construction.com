@@ -9,7 +9,7 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Albanil</h4>
+    <h4>Albañil</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -62,17 +62,63 @@
 
     </dl>
 </div>
+
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.codigoAl }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
-
 <button type="button" class="btn btn-success dropdown-toggle"
-        aria-haspopup="true" aria-expanded="false"
+ aria-haspopup="true" aria-expanded="false"
         data-target="#modal_contratar_albanil" data-toggle="modal"
         data-backdrop="static" data-keyboard="false"
         onclick="contratar_arq('@Model.codigoAl')">
-    Contratar Albañil
+    Contratar
 </button>
 
-@Html.Partial("Modal_Contratar_Albanil");
+<div id="modal_contratar_albanil" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Contratar Albañil</h4>
+            </div>
+            <div class="modal-body">
+                <img src="https://0.academia-photos.com/attachment_thumbnails/35383700/mini_magick20180815-27276-1qfeeig.png?1534391197" width="100%"/>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-dismiss="modal">Cerrar</button> <button type="button" class="btn btn-success dropdown-toggle"
+        aria-haspopup="true" aria-expanded="false"
+        data-target="#modal_confirmar_contrato" data-toggle="modal"
+        data-backdrop="static" data-keyboard="false"
+        onclick="contratar_al('@Model.codigoAl')">
+     Formalizar Contrato
+</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal_confirmar_contrato" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background-color: background: #ffe259; /* fallback for old browsers */ background: -webkit-linear-gradient(to right, #ffa751, #ffe259); /* Chrome 10-25, Safari 5.1-6 */ background: linear-gradient(to right, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ ">
+            <div class="modal-header">
+                <h4 class="modal-title">¿Estas seguro de que quieres confirmar el contrato?</h4>
+            </div>
+            <div class="modal-body">
+                <p>Al confirmar este contrato se agregara automaticamente en su apartado
+                de contratos y se enviara una copia al albañil, para que este pueda 
+                revisarlo y darle una respuesta lo más pronto posible.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-dismiss="modal">Cancelar</button> <button class="btn btn-success" data-dismiss="modal" onclick="cerrarModals()">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+  cerrarModals= function(){
+    window.location.href="https://localhost:44303/Contratistas";
+}
+
+</script>
